@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-size: 20px;
+        line-height: 35px;
+        font-family: Roboto, "ubnutu", sans-serif;
+    }
+
+    body {
+        padding: 10px 50px;
+    }
+
+    hr {
+        margin: 10px;
+    }
+
+    header {
+        display: grid;
+        padding: 30px;
+        grid-template-columns: 280px auto;
+        column-gap: 50px;
+    }
+
+    header div p {
+        padding: 8px;
+    }
+
+    .logo {
+        width: 280px;
+    }
+
+    .logo-title {
+        font-size: 60px;
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 300;
+        text-transform: capitalize;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table tr:hover {
+        background-color: #D6EEEE;
+    }
+
+    table td,
+    th {
+        vertical-align: top;
+        padding: 10px;
+    }
+
+    .table-first{
+        width: 20%;
+    }
+
+    .table-second{
+        width: 15%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-bold {
+        font-weight: 600;
+    }
+
+    .text-italic {
+        font-style: italic;
+    }
+</style>
+
+<body>
+    <header>
+        <img class="logo" src="DA-IICT-logo.png" aria-placeholder="DA-IICT-logo" />
+        <div>
+            <p class="logo-title">
+                Alay Kharadi
+            </p>
+            <p class="text-bold">
+                Dhirubhai Ambani Institute of Information and Communication Technology
+            </p>
+            <p>
+                <span class="text-bold">Email</span>: alay.kharadi3@gmail.com
+            </p>
+            <p>
+                <span class="text-bold">DOB</span>: January 2, 2001
+            </p>
+            <p>
+                <span class="text-bold">Address</span>: <br />
+                12/1, Omkar-1 tenament, Near St Mary's school, Adishwarnagar road, New Naroda,
+                Ahemdabad, Gujarat - 382330
+            </p>
+        </div>
+    </header>
+
+    <hr />
+
+    <div>
+        <p class="title">education</p>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>University/Institute</th>
+                <th>Year</th>
+                <th>CPI/Aggregate</th>
+            </tr>
+            <tr>
+                <td class="text-bold table-first".>
+                    B.Tech | ICT
+                </td>
+                <td>
+                    Dhirubhai Ambani Institute of Information and Communication Technology
+                </td>
+                <td class="text-center">
+                    2022
+                </td>
+                <td class="text-center">
+                    6.71
+                </td>
+            </tr>
+            <tr>
+                <td class="text-bold table-first">
+                    Higher Secondary | Class XII
+                </td>
+                <td>
+                    Sahajanand Vidhayala, Ahmedabad (GHSEB)
+                </td>
+                <td class="text-center">
+                    2018
+                </td>
+                <td class="text-center">
+                    84.46%
+                </td>
+            </tr>
+            <tr>
+                <td class="text-bold table-first">
+                    Secondary | Class X
+                </td>
+                <td>
+                    Sahajanand Vidhayala, Ahmedabad (GSEB)
+                </td>
+                <td class="text-center">
+                    2016
+                </td>
+                <td class="text-center">
+                    89.33%
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <div>
+        <p class="title">
+            skills
+        </p>
+        <table>
+            <tr>
+                <td class="text-bold table-first">
+                    Expertise Area/Area(s) of Interest
+                </td>
+                <td>
+                    Web Development, Data Structures & Algorithms
+                </td>
+            </tr>
+            <tr>
+                <td class="text-bold table-first">
+                    Programming Language(s)
+                </td>
+                <td>
+                    HTML, CSS, Javascript, ReactJS, AngularJS, NodeJS, C, C++, Java
+                </td>
+            </tr>
+            <tr>
+                <td class="text-bold table-first">
+                    Tools and Technologies
+                </td>
+                <td>
+                    Git & Github
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <div>
+        <p class="title">
+            professional experience / internship
+        </p>
+        <table>
+            <tr>
+                <td class="table-second">Rural Internship:</td>
+                <td>
+                    We did our rural internship in Vanvasi Kalyan Ashram, Kotra, Rajasthan.
+                    This NGO is for orphan children. During the Internship we tried to teach
+                    students. Also we observed other activities of NGO like Animal
+                    Husbandry and farming. We also arranged campaign for spreading awareness in the village regarding
+                    studies and health.
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>: <span class="text-italic">Prof. Alka Parikh</span>
+                </td>
+                <td>
+                    December-2019
+                    <br />
+                    Team Size: 5
+                </td>
+            </tr>
+            <tr>
+                <td class="table-second">Research Internship:</td>
+                <td>
+                    We did our research internship under prof. Tapaskumar Maiti. In this
+                    Internship We created A website which will be able to connect to a ROS
+                    simulation on both online and offline mode. You can also see the logs
+                    regarding the process.
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>: <span class="text-italic">Prof. Tapaskumar
+                        Maiti</span>
+                </td>
+                <td>
+                    May - July , 2021
+                    <br />
+                    Team Size: 3
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <div>
+        <p class="title">
+            projects
+        </p>
+        <table>
+            <tr>
+                <td class="table-first">
+                    channel, encoder and decoder for LDPC
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>:<br /> <span class="text-italic">Prof. Yash Vasavada</span>
+                </td>
+                <td>
+                    In this project we designed the encoder, decoder and channel for
+                    transmission method low density parity check(LDPC).
+                </td>
+                <td class="table-second">
+                    March - April, 2019
+                    <br />
+                    Team Size: 10
+                </td>
+            </tr>
+            <tr>
+                <td class="table-first">
+                    Workflow Management App
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>:<br /> <span class="text-italic">Prof. Saurabh Tiwari</span>
+                </td>
+                <td>
+                    It is React based workflow management app. In this app 3 different type of
+                    user can perform different set of actions like creating new project, adding
+                    manager by admin to certain project, sharing document links, chatting with
+                    other users. there are other features such as Kanban board to create new
+                    task, Calendar to create event, to do list.
+                    <br />
+                    <span class="text-bold text-italic">GitHub-Link</span>: <a
+                        href="https://github.com/karanbhatia116/G_14-Workflow-management-system"
+                        target="_blank">https://github.com/karanbhatia116/G_14-Workflow-management-system</a>
+                </td>
+                <td class="table-second">
+                    January - March, 2021
+                    <br />
+                    Team Size: 10
+                </td>
+            </tr>
+            <tr>
+                <td class="table-first">
+                    Food-Desk
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>:<br /> <span class="text-italic">Prof. Jayprakash Lalchandani</span>
+                </td>
+                <td>
+                    It is React based food ordering site. In this app 3 different type of user can
+                    September 2021 - perform different set of actions like creating new shops, adding items by November
+                    2021 shop owers to their owned shops, going thorugh every items available on
+                    the site, ordering items via site. there are other features such as cart,
+                    promo code.
+                    <br />
+                    <span class="text-bold text-italic">GitHub-Link</span>: <a
+                        href="https://github.com/AlayKharadi/food-desk"
+                        target="_blank">https://github.com/AlayKharadi/food-desk</a>
+                </td>
+                <td class="table-second">
+                    September - November, 2021
+                    <br />
+                    Team Size: 3
+                </td>
+            </tr>
+            <tr>
+                <td class="table-first">
+                    GroupBills
+                    <br />
+                    <span class="text-bold text-italic">Guide</span>:<br /> <span class="text-italic">Prof. Manish Kumar</span>
+                </td>
+                <td>
+                    It is a Web App that takes multiple transaction inputs from the user and
+                    give you the minimum number of transactions possible to settles the
+                    balance between group of people.
+                    <br />
+                    <span class="text-bold text-italic">GitHub-Link</span>: <a
+                        href="https://github.com/AlayKharadi/GroupBills"
+                        target="_blank">https://github.com/AlayKharadi/GroupBills</a>
+                </td>
+                <td class="table-second">
+                    October - November, 2021
+                    <br />
+                    Team Size: 4
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <div>
+        <div class="title">
+            positions of responsiblities
+        </div>
+        <ul>
+            <li>
+                Event Co-ordinator | Annual Cultural Fest Synapse at DAIICT
+            </li>
+            <li>
+                volunteer | Annual technical Fest I-fest at DAIICT
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
