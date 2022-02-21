@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Invoice
+    </title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div>
+                <button class="btn btn-red">Due</button> <b>Invoice</b>
+            </div>
+            <div>
+                <p>Thank you for your purchase. Timely Payment will be appreciated.</p>
+            </div>
+            <div class="flex-row">
+                <div>
+                    <label for="InvoiceID">Invoice No.</label>
+                    <div class="input-container" style="--w: 200px; --bg: rgb(212, 212, 212);">
+                        <div style="--span: 50px;">#</div>
+                        <input type="text" name="InvoiceID" value="" id="InvoiceID" />
+                    </div>
+                </div>
+                <div>
+                    <label for="Language">Language</label>
+                    <select id="Language" name="Language">
+                        <option value="English (US)">English (US)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="file-input">
+                <label for="Logo">Drop your Logo here...</label>
+                <input type="file" name="Logo" id="Logo" disabled/>
+            </div>
+            <div>
+                <label for="Currency">Currency</label>
+                <select id="Currency" name="Currency">
+                    <option value="INR">Indian Ruppee - INR</option>
+                    <option value="USD">American Dollar - USD</option>
+                    <option value="GBP">British Pound - GBP</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        <div>
+            <div>
+                <label for="From">From</label>
+                <p id="From">
+                    Your Business, Inc.<br />
+                    Your Address<br />
+                    City & ZIP, Your Country
+                </p>
+            </div>
+            <div>
+                <label for="To">To</label>
+                <textarea id="To" rows="4" class="address" name="To" placeholder="Example, Inc. &#10;80 Mortimer Street &#10;London W1W 7FE &#10;United Kingdom"></textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="Date">Date</label>
+                <input type="date" name="Date" value="2022-04-26" id="Date"/>
+            </div>
+            <div>
+                <label for="Due">Invoice Due</label>
+                <select id="Due" name="Due">
+                    <option value="5">After 5 Day</option>
+                    <option value="10">After 10 Days</option>
+                    <option value="15">After 15 Days</option>
+                    <option value="20">After 20 Days</option>
+                    <option value="30">After 30 Days</option>
+                </select>
+            </div>
+            <div>
+                <label for="order">Purchase Order Number</label>
+                <input type="text" name="order" value="PO-123" id="order" />
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <table id="list">
+            <tr>
+                <th>Name</th>
+                <th style="width: 10%;">Quantity</th>
+                <th style="width: 10%;">Rate</th>
+                <th style="width: 10%;">Amount</th>
+            </tr>
+        </table>
+        <div class="container">
+            <div>
+                <button class="btn btn-purple" onclick="AddToList()">New Line</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Sub Total</th>
+                    <td id="subTotal">0</td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="input-container" style="--w: auto; --bg: rgb(212, 212, 212);">
+                            <div style=" --span: 250px;">
+                                Value-Added-Tax
+                            </div>
+                            <input type="number" id="tax" name="tax" onchange="CheckTax()" value="0" min="0" max="100" />
+                        </div>
+                    </th>
+                    <td id="tax-value">0</td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td id="total">0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="input-container" style="--w: auto; --bg: tomato;">
+                            <div style=" --span: 120px;">
+                                Total Due
+                            </div>
+                            <input type="text" id="total-due" name="total" value="0" disabled="true" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
