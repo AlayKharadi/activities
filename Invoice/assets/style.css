@@ -8,12 +8,17 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#htmlTopdf{
+    padding: 0px;
+    border: 2px solid red;
+}
+
 hr{
     padding: 0px;
 }
 
 body{
-    padding: 35px;
+    padding: 30px;
 }
 
 label {
@@ -36,7 +41,8 @@ input{
 
 .container {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: auto 400px;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
 }
 
 .flex-row{
@@ -59,7 +65,7 @@ input{
 }
 
 .input-container{
-    width: var(--w);
+    max-width: var(--w);
     display: flex;
     flex-direction: row;
     padding: 0px;
@@ -153,11 +159,8 @@ table td{
     background-color: rgb(201, 143, 255);
 }
 
-.btn-purple:hover{
-    cursor: pointer;
-}
-
 .btn{
+    cursor: pointer;
     color: whitesmoke;
     border: none;
     border-radius: 5px;

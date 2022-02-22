@@ -76,6 +76,8 @@ function CheckForNumber(id) {
         sum = sum + Number(document.getElementById(`Amount-${i}`).value);
     }
     document.getElementById("subTotal").innerHTML = sum;
+    var tax = document.getElementById('tax').value;
+    document.getElementById('tax-value').innerHTML = (Number(tax)*Number(sum))/100;
     document.getElementById('total').innerHTML = Number(sum) + Number(document.getElementById('tax-value').innerHTML);
     document.getElementById('total-due').value = Number(document.getElementById('total').innerHTML);
 }
@@ -96,4 +98,16 @@ function CopyItem(id){
     setTimeout(() => {
         document.getElementById(`copy-${id}`).style = "fill: rgb(145, 145, 145)";
     }, 1000);
+}
+
+function HTMLtoPDF(){
+    var doc = document.getElementById('htmlTopdf');
+    html2pdf(doc, {
+        margin: 7,
+        filename: 'invoice.pdf',
+        image: { type: 'jpeg', quality: 0.99 },
+        html2canvas: { scale: 3 },
+        pagebreak: { mode: 'avoid-all' },
+        jsPDF: { unit: 'mm', format: 'a3' },
+    });
 }
