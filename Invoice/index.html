@@ -9,6 +9,7 @@
         Invoice
     </title>
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -17,7 +18,7 @@
 <body>
     <button class="btn btn-red" onclick="HTMLtoPDF()">Download</button>
     <div id="htmlTopdf">
-        <div class="container">
+        <div class="container" style="--w2: 400px;">
             <div>
                 <div>
                     <button class="btn btn-red">Due</button> <b>Invoice</b>
@@ -48,16 +49,17 @@
                 </div>
                 <div>
                     <label for="Currency">Currency</label>
-                    <select id="Currency" name="Currency">
+                    <select id="Currency" name="Currency" onchange="CovertCurrency()">
                         <option value="INR">Indian Ruppee - INR</option>
                         <option value="USD">American Dollar - USD</option>
                         <option value="GBP">British Pound - GBP</option>
+                        <option value="CAD">Canadian Dollar - CAD</option>
                     </select>
                 </div>
             </div>
         </div>
         <hr />
-        <div class="container">
+        <div class="container" style="--w2: 400px;">
             <div>
                 <div>
                     <label for="From">From</label>
@@ -101,11 +103,11 @@
                     <th>Name</th>
                     <th style="width: 10%;">Quantity</th>
                     <th style="width: 10%;">Rate</th>
-                    <th style="width: 10%;">Amount</th>
+                    <th style="width: 20%;">Amount</th>
                 </tr>
             </table>
         </div>
-        <div class="container">
+        <div class="container" style="--w2: 50%">
             <div>
                 <button class="btn btn-purple" onclick="AddToList()">New Line</button>
             </div>
@@ -116,7 +118,7 @@
                 </tr>
                 <tr>
                     <th>
-                        <div class="input-container" style="--w: auto; --bg: rgb(212, 212, 212);">
+                        <div class="input-container" style="--w: 350px; --bg: rgb(212, 212, 212);">
                             <div style=" --span: 250px;">
                                 Value-Added-Tax
                             </div>

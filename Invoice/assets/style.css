@@ -10,7 +10,6 @@
 
 #htmlTopdf{
     padding: 0px;
-    border: 2px solid red;
 }
 
 hr{
@@ -41,7 +40,7 @@ input{
 
 .container {
     display: grid;
-    grid-template-columns: auto 400px;
+    grid-template-columns: auto var(--w2);
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
 }
 
@@ -142,9 +141,8 @@ table td{
     padding: 0px;
 }
 
-.buttons div svg{
-    fill: rgb(145, 145, 145);
-    padding: 10px;
+.buttons div i{
+    color: rgb(145, 145, 145);
     min-width: 50px;
     background-color: rgb(226, 226, 226);
     border: 2px solid rgb(212, 212, 212);
