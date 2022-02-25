@@ -90,3 +90,9 @@ console.log(a.localeCompare(b))
 console.log((a + 'a').localeCompare(b))
 console.log((a).localeCompare(b + 'a'))
 
+console.log(typeof("bfjbnfjbd"))
+console.log(typeof(new String("vfjnvdjfvnd")))
+
+
+console.log("Hello" === "Hello")
+console.log((new String("Hello")) === (new String("Hello")))

@@ -69,3 +69,24 @@ console.log((a <= b) && !(a < b));
 console.log(a.valueOf() === b.valueOf());
 
 //Format the values in certain way
+console.log(a.toLocaleString('en-us', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour:'2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'long',
+    era: 'long' }))
+//you also have localeTimeString & localeDateString
+
+if(null){
+    console.log("Print A")
+}else if (""){
+    console.log("Print B")
+}else if ([]){
+    console.log("Print C")
+}else if (undefined){
+    console.log("Print D")
+}
