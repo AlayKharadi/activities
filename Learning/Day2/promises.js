@@ -39,3 +39,17 @@ Promise.all([wait(4, 1000), wait(5, 1000), "hello world"]).then(value => console
 Promise.race([wait(4, 4000), wait(5, 4000), wait(6, 4000)]).then(value => console.log(value))
 
 wait(4, 4000).then(value => console.log(value)).catch(error => console.log(error)).finally(() => console.log("Done......"))
+
+async function output(){
+    const a = await new Promise((resolve, reject) => {
+        let x = 0;
+        if(x === 0){
+            resolve(4);
+        }else{
+            reject(7);
+        }
+    })
+    console.log(a);
+}
+
+output();
