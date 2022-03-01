@@ -16,7 +16,7 @@ for (item of set) {
 }
 
 set.forEach((value, value2, set) => {
-    console.log(value+" "+value2);
+    console.log(value+" "+value2+" "+JSON.stringify(set));
 }, this);
 
 set.clear();
