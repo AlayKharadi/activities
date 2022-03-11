@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Learning</title>
+    <!-- put the link at the top as we want it to load before we go further -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<!-- directive is html attribute with ng prefix -->
+<!-- body is an owner of angular application via ng-app directive -->
+<!-- ng-controller is used to control the application -->
+<!-- ng-init is not very common way of intializing values -->
+
+<body data-ng-app="myApp" data-ng-init="name=''">
+    <p>
+        The root scope have value as {{value}}
+    </p>
+    <div data-ng-controller="myControl">
+        <p>
+            This scope have value as {{value}}
+        </p>
+
+        <p> The current url is {{ myUrl }}</p>
+        <label for="name">Name: </label>
+        <!-- ng model works as variable binding, it connects the value of ipnut to the name vairable of angular app -->
+        <input name="name" id="name" type="text" data-ng-model="name" />
+        <!-- you can bind the app vaiable with tags using ng-bind directive -->
+        <!-- ng-bind binds the innerHTML with the angular variable -->
+        <p data-ng-bind="name"></p>
+
+        <label for="firstname">FirstName</label>
+        <input name="firstname" id="firstname" data-ng-model="firstname" />
+        <label for="lastname">LastName</label>
+        <input name="lastname" id="lastname" data-ng-model="lastname" />
+
+        <!-- angualr expression are written inside {{}} -->
+        <span>{{ (firstname | uppercase) + " " + (lastname | lowercase) }}</span>
+
+        <!-- ways to use artifical directive -->
+        <!-- value from a contstructor directive -->
+        <div my-directive></div>
+        <my-directive></my-directive>
+        <!-- you need to set restrict as 'C' to be able to use it as class -->
+        <div class="my-directive"></div>
+
+        <!--
+            currency Format a number to a currency format.
+            date Format a date to a specified format.
+            filter Select a subset of items from an array.
+            json Format an object to a JSON string.
+            limitTo Limits an array/string, into a specified number of elements/characters.
+            lowercase Format a string to lower case.
+            number Format a number to a string.
+            orderBy Orders an array by an expression.
+            uppercase Format a string to upper case.
+        -->
+
+        <!-- looping through elements of a variable -->
+        <input type="text" id="color-filter" data-ng-model="colorFilter" placeholder="language" />
+        <ul>
+            <!-- data-ng-repeat actually clones that element for every value -->
+            <li data-ng-repeat="language in languages | orderBy | filter : colorFilter ">
+                {{ language }}
+            </li>
+        </ul>
+
+        <form name="myForm">
+            Email:
+            <input type="email" id="myEmail" name="myEmail" data-ng-model="myEmail" required>
+            <!-- if data-ng-show is true it will show the output -->
+            <span id="myEmail-error" data-ng-show="myForm.myEmail.$error.email">Not a valid e-mail address</span>
+            <h1>Status</h1>
+            validity: {{myForm.myEmail.$valid}} <br />
+            dirty: {{myForm.myEmail.$dirty}} <br />
+            touched: {{myForm.myEmail.$touched}}
+        </form>
+
+        <button data-ng-click="changeTheme()">{{theme}}</button>
+    </div>
+
+    <script type="text/javascript" src="./myApp.js"></script>
+    <script type="text/javascript" src="./myControl.js"></script>
+</body>
+
+</html>

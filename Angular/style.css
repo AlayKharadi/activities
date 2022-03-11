@@ -1,0 +1,13 @@
+/* ng-empty
+ng-not-empty
+ng-touched
+ng-untouched
+ng-valid
+ng-invalid
+ng-dirty
+ng-pending
+ng-pristine */
+/* you can use the above option to style your app according to the state of an angular variable */
+#myEmail.ng-invalid {
+    background-color: rgb(255, 172, 172);
+}
